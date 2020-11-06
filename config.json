@@ -1,0 +1,13 @@
+{
+  "hostname": "https://<hostname>:5656",
+  "servers": {
+      "server1":{
+        "key": "VTN2L-MF47O-13ESX",
+        "hash": "6a5d4ad2erv16assd8e8r4s5d2sf15efa3s2d1e5f"
+      },
+      "server2": {
+        "key": "ABCD1-EFGH2-IJKL3",
+        "hash": "adw221e6fedsad2ef5sa6df2f1r5r6t2f1a6s5d1a"
+      }
+    }
+}

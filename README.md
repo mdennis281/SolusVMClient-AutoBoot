@@ -1,6 +1,59 @@
 # SolusVMClient-AutoBoot
  Auto-boots any offline VPSes managed in SolusVM through their Client API
 
+## Usage
+### Example config.json:
+```json
+{
+  "hostname": "https://vm.example.com:5656",
+  "servers": {
+      "server1":{
+        "key": "1LKJI-MA47O-1AEFX",
+        "hash": "6a5d4ad2erv16assd8e8r4s5d2sf15efa3s2d1e5f"
+      },
+      "server2": {
+        "key": "ABCD1-EFGH2-IJKL3",
+        "hash": "adw221e6fedsad2ef5sa6df2f1r5r6t2f1a6s5d1a"
+      }
+    }
+}
+
+```
+### Basic Example:
+```python
+from src import AutoBoot
+
+#default log method is to print result to console
+VPSAB = AutoBoot(log=True)
+VPSAB.runAll()
+```
+
+### Other Examples:
+Only print to console if a server is offline
+```python
+VPSAB = AutoBoot(log=True,logLevel=1)
+VPSAB.runAll()
+```
+Log to file if server offline
+```python
+VPSAB = AutoBoot(
+   log=True,
+   logLevel=1,
+   type='file',
+   filePath='./log.log'
+)
+VPSAB.runAll()
+```
+Log everything to file
+```python
+VPSAB = AutoBoot(
+   log=True,
+   logLevel=0,
+   type='file',
+   filePath='./log.log'
+)
+VPSAB.runAll()
+```
 
 ## Auto-Run Scheduling (Windows/Task Scheduler)
 Create a .bat file somewhere in the project directory. add the following contents:

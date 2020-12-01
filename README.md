@@ -88,5 +88,5 @@ When finished, you can right click the newly created task & click "Run". Then, c
 Open terminal (assuming GUI)
 
 type "crontab -e"
-create a cron job at the desired frequency with the command "python /path/to/project/main.py"
+create a cron job at the desired frequency with the command "python3 /path/to/project/main.py"
 >Note: If you dont know how to format a cron job, use this: https://crontab-generator.org/
